@@ -7,9 +7,9 @@ EducationalPlatform is a SoftUni Angular Project. The application for creating a
 
 # How to run 
 SoftUni Practice Server 
-- Navigate to server folder
-- Run the server
+- Navigate to server folder - cd server
+- Run the server - node server.js
 
 The application
-- Navigate to client folder 
-- Run the application
+- Navigate to client (educational-platform) folder - cd educational-platform
+- Run the application - npm start
