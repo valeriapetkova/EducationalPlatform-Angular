@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './core/error/error.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -12,6 +13,7 @@ const routes: Routes = [
       // { path: ':courseId', component: CoursesDetailsComponent},
     ],
   },
+  { path: 'error', component: ErrorComponent },
 ];
 
 @NgModule({

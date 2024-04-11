@@ -1,5 +1,25 @@
 <header class="site-header">
     <div class="site-title">
-        <a routerLink="/home">DemoPlatform</a>
+        <a routerLink="/home">Home</a>
+    </div>
+
+    <div *ngIf="!isLoggedIn" class="site-nav">
+        <nav>
+            <ul>
+                <li><a routerLink="/courses">Courses</a></li>
+                <li><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/register">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div *ngIf="isLoggedIn" class="site-nav">
+        <nav>
+            <ul>
+                <li><a routerLink="/courses">Courses</a></li>
+                <!-- <li><a routerLink="/my-courses">My courses</a></li>
+                <li><a routerLink="/create">Create course</a></li> -->
+                <li (click)="logout()"><a>Logout</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
