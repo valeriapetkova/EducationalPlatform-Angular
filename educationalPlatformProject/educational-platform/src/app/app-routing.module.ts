@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './core/error/error.component';
 import { CoursesDetailsComponent } from './courses/courses-details/courses-details.component';
 import { MyCoursesComponent } from './courses/my-courses/my-courses.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -23,6 +24,8 @@ const routes: Routes = [
   ],
   },
   { path: 'error', component: ErrorComponent },
+  { path: '**', redirectTo: '/404'},
+  { path: '404', component: NotFoundComponent },
 ];
 
 @NgModule({

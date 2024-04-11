@@ -11,11 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { UserModule } from './user/user.module';
 import { CoursesModule } from './courses/courses.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    NotFoundComponent,
     AuthenticateComponent,
   ],
   imports: [

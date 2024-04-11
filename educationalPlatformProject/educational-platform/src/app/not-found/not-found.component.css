@@ -1,0 +1,17 @@
+.not-found-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: lightblue;
+}
+
+.not-found-content {
+    font-size: 70px;
+    letter-spacing: 10px;
+    color: white;
+    font-weight: bold;
+}
