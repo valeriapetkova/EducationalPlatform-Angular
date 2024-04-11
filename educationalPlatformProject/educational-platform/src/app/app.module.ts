@@ -10,6 +10,7 @@ import { appInterceptorProvider } from './app.interceptor';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { UserModule } from './user/user.module';
+import { CoursesModule } from './courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UserModule } from './user/user.module';
     SharedModule,
     HttpClientModule,
     UserModule,
+    CoursesModule,
     AppRoutingModule
   ],
   providers: [appInterceptorProvider],

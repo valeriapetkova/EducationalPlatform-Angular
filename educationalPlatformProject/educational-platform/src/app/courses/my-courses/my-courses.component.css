@@ -1,0 +1,17 @@
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.course-card {
+    display: flex;
+    margin: 1.5em;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 30em;
+    border: 3px solid lightblue;
+    border-radius: 2em;
+}

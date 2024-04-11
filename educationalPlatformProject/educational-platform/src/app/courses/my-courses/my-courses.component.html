@@ -1,0 +1,15 @@
+<div *ngFor="let course of courses" class="courses-container">
+    <div class="course-card">
+        <div class="course-title">
+            <a [routerLink] = "course._id">
+                <h2>{{ course.title }}</h2>
+            </a>
+        </div>
+        
+        <div class="course-info">
+            <p>Start: {{ course.startDate }}</p>
+            <p>End: {{ course.endDate }}</p>
+            <p>Category: {{ course.category }}</p>
+        </div>
+    </div>
+</div>

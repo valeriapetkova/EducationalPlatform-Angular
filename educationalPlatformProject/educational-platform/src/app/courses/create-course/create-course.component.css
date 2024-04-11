@@ -1,0 +1,85 @@
+.create-course-container {
+    border: 3px solid lightblue;
+    border-radius: 2em;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 0.8em;
+}
+
+.container-name {
+    text-align: center;
+    font-weight: bold;
+    background-color: lightblue;
+    color: white;
+    margin-top: 0.7em;
+    border-radius: 0.3em;
+    padding: 0.3em;
+}
+
+.container-form {
+    margin: 1.3em;
+    max-width: 450px;
+}
+
+.new-course-title,
+.new-course-startDate,
+.new-course-endDate,
+.new-course-category,
+.new-course-description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.6em;
+}
+
+.new-course-title label,
+.new-course-startDate label,
+.new-course-endDate label,
+.new-course-category label,
+.new-course-description label {
+    font-weight: bold;
+}
+
+.new-course-title input,
+.new-course-startDate input,
+.new-course-endDate input,
+.new-course-category input {
+    padding: 0.3em;
+}
+
+.new-course-title input,
+.new-course-startDate input,
+.new-course-endDate input,
+.new-course-category input,
+.new-course-description textarea {
+    border-radius: 0.3em;
+    font-size: 17px;
+}
+
+.new-course-title input:hover,
+.new-course-startDate input:hover,
+.new-course-endDate input:hover,
+.new-course-category input:hover,
+.new-course-description textarea:hover {
+    border: 4px solid lightblue;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    background-color: lightblue;
+    border: 1.5px solid lightblue;
+    border-radius: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+}

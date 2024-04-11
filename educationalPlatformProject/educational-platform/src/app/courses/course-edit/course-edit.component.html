@@ -1,0 +1,61 @@
+<div class="edit-course-container">
+    <div class="container-name">
+        <h2>Edit course</h2>
+    </div>
+
+    <div class="container-form">
+        <form [formGroup]="form" (ngSubmit)="saveCourseChangesHandler()">
+            <div class="edit-course-title">
+                <label for="courseTitle">Title</label>
+                <input type="text" name="title" id="courseTitle" [value]="courseEdit.title" formControlName="title">
+
+                <ng-container *ngIf="form.get('title')?.touched">
+                    <p class="error" *ngIf="form.get('title')?.errors?.['required']">Title is required!</p>
+                    <p class="error" *ngIf="form.get('title')?.errors?.['minlength']">Title must be at least 3 characters!</p>
+                </ng-container>
+            </div>
+
+            <div class="edit-course-startDate">
+                <label for="startDate">Start date</label>
+                <input type="date" name="startDate" id="startDate" [value]="courseEdit.startDate" formControlName="startDate">
+
+                <ng-container *ngIf="form.get('startDate')?.touched">
+                    <p class="error" *ngIf="form.get('startDate')?.errors?.['required']">Start date is required!</p>
+                </ng-container>
+            </div>
+
+            <div class="edit-course-endDate">
+                <label for="endDate">End date</label>
+                <input type="date" name="endDate" id="endDate" [value]="courseEdit.endDate" formControlName="endDate">
+
+                <ng-container *ngIf="form.get('endDate')?.touched">
+                    <p class="error" *ngIf="form.get('endDate')?.errors?.['required']">End date is required!</p>
+                </ng-container>
+            </div>
+
+            <div class="edit-course-category">
+                <label for="category">Category</label>
+                <input type="text" name="category" id="category" [value]="courseEdit.category" formControlName="category">
+
+                <ng-container *ngIf="form.get('category')?.touched">
+                    <p class="error" *ngIf="form.get('category')?.errors?.['required']">Category is required!</p>
+                    <p class="error" *ngIf="form.get('category')?.errors?.['minlength']">Category must be at least 3 characters!</p>
+                </ng-container>
+            </div>
+
+            <div class="edit-course-description">
+                <label for="description">Description</label>
+                <textarea type="text" name="description" id="description" rows="3" [value]="courseEdit.description" formControlName="description"></textarea>
+
+                <ng-container *ngIf="form.get('description')?.touched">
+                    <p class="error" *ngIf="form.get('description')?.errors?.['required']">Description is required!</p>
+                    <p class="error" *ngIf="form.get('description')?.errors?.['minlength']">Description must be at least 10 characters!</p>
+                </ng-container>
+            </div>
+
+            <div class="btns">
+                <button class="btn">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>

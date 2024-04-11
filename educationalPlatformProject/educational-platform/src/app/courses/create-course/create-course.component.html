@@ -1,0 +1,61 @@
+<div class="create-course-container">
+    <div class="container-name">
+        <h2>Create course</h2>
+    </div>
+
+    <div class="container-form">
+        <form #form="ngForm" (ngSubmit)="addCourse(form)">
+            <div class="new-course-title">
+                <label for="courseTitle">Title</label>
+                <input type="text" name="title" id="courseTitle" #inputCourseName="ngModel" ngModel required minlength="3">
+
+                <ng-container *ngIf="inputCourseName.touched">
+                    <p class="error" *ngIf="inputCourseName?.errors?.['required']">Title is required!</p>
+                    <p class="error" *ngIf="inputCourseName?.errors?.['minlength']">Title must be at least 3 characters!</p>
+                </ng-container>
+            </div>
+
+            <div class="new-course-startDate">
+                <label for="startDate">Start date</label>
+                <input type="date" name="startDate" id="startDate" #inputStartDate="ngModel" ngModel required>
+
+                <ng-container *ngIf="inputStartDate.touched">
+                    <p class="error" *ngIf="inputStartDate?.errors?.['required']">Start date is required!</p>
+                </ng-container>
+            </div>
+
+            <div class="new-course-endDate">
+                <label for="endDate">End date</label>
+                <input type="date" name="endDate" id="endDate" #inputEndDate="ngModel" ngModel required>
+
+                <ng-container *ngIf="inputEndDate.touched">
+                    <p class="error" *ngIf="inputEndDate?.errors?.['required']">End date is required!</p>
+                </ng-container>
+            </div>
+
+            <div class="new-course-category">
+                <label for="category">Category</label>
+                <input type="text" name="category" id="category" #inputCategory="ngModel" ngModel required minlength="3">
+
+                <ng-container *ngIf="inputCategory.touched">
+                    <p class="error" *ngIf="inputCategory?.errors?.['required']">Category is required!</p>
+                    <p class="error" *ngIf="inputCategory?.errors?.['minlength']">Category must be at least 3 characters!</p>
+                </ng-container>
+            </div>
+
+            <div class="new-course-description">
+                <label for="description">Description</label>
+                <textarea type="text" name="description" id="description" rows="3" #inputDescription="ngModel" ngModel required minlength="10"></textarea>
+
+                <ng-container *ngIf="inputDescription.touched">
+                    <p class="error" *ngIf="inputDescription?.errors?.['required']">Description is required!</p>
+                    <p class="error" *ngIf="inputDescription?.errors?.['minlength']">Description must be at least 10 characters!</p>
+                </ng-container>
+            </div>
+
+            <div class="btns">
+                <button class="btn">Create</button>
+            </div>
+        </form>
+    </div>
+</div>

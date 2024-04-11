@@ -1,0 +1,29 @@
+<div class="course-detail-container">
+    <ng-container *ngIf="!showEditMode">
+        <div class="course-detail-content">
+            <div class="course-detail-title">
+                <h2>{{ course.title }}</h2>
+            </div>
+            
+            <div class="course-detail-info">
+                <div class="course-dates">
+                    <p>Start: {{ startDate }}</p>
+                    <p>End: {{ endDate }}</p>
+                </div>
+                
+                <p>Category: {{ course.category }}</p>
+                <p>Description:</p>
+                <p>{{ course.description }}</p>
+            </div>
+    
+            <div *ngIf="isLoggedIn && isOwner(course)"class="btns">
+                <a class="btn-edt" (click)="onToggle()">Edit</a>
+                <a class="btn-del" (click)="delete()">Delete</a>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showEditMode">
+        <app-course-edit [courseInfo]="course"/>
+    </ng-container>
+</div>
