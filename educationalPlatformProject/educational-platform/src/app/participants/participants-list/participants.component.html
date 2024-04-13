@@ -1,0 +1,18 @@
+<div class="participants-container">
+    <p>Participants: {{ participants?.length }}</p>
+
+    <ng-container *ngIf="!hasOwner()">
+        <div *ngIf="!joined" class="btns">
+            <a class="btn-jn" (click)="join()">Join</a>
+        </div>
+        <div *ngIf="joined" class="text">
+            <p class="txt-jn">Joined</p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="hasOwner()">
+        <div *ngFor="let participant of participants" class="all-participants">
+                <p>{{ participant.email }}</p>
+        </div>
+    </ng-container>
+</div>

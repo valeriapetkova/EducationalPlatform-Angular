@@ -20,6 +20,10 @@
                 <a class="btn-edt" (click)="onToggle()">Edit</a>
                 <a class="btn-del" (click)="delete()">Delete</a>
             </div>
+
+            <ng-container *ngIf="isLoggedIn">
+                <app-participants [owner]="course._ownerId" />
+            </ng-container>
         </div>
     </ng-container>
 

@@ -1513,6 +1513,9 @@
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
     		}
     	},
+        participants: {
+
+        },
     	likes: {
     	},
     	ideas: {
