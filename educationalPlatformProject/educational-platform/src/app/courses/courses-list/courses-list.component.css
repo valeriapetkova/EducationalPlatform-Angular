@@ -1,3 +1,9 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .courses-container {
     display: flex;
     flex-wrap: wrap;
@@ -14,4 +20,16 @@
     width: 30em;
     border: 3px solid lightblue;
     border-radius: 2em;
+}
+
+.title {
+    background-color: lightblue;
+    border-radius: 3em;
+    margin: 0.4em 1.3em;
+    padding: 0.8em;
+}
+
+.title h2 {
+    color: white;
+    text-align: center;
 }

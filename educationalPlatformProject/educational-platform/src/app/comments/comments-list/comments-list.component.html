@@ -19,7 +19,7 @@
         <form #form="ngForm" (ngSubmit)="addComment(form)">
             <div class="comment-fields">
                 <label for="comment">Add new comment</label>
-                <textarea type="text" name="comment" id="comment" rows="2" #inputComment="ngModel" ngModel required minlength="5"></textarea>
+                <textarea type="text" name="comment" id="comment" rows="1" #inputComment="ngModel" ngModel required minlength="5"></textarea>
 
                 <ng-container *ngIf="inputComment.touched">
                     <p class="error" *ngIf="inputComment?.errors?.['minlength']">Comment must be at least 5 characters!</p>
