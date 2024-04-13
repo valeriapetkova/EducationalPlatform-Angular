@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CourseEditComponent } from "./course-edit/course-edit.component";
 import { MyCoursesComponent } from "./my-courses/my-courses.component";
 import { ParticipantsModule } from "../participants/participants.module";
+import { CommentsModule } from "../comments/comments.module";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,7 @@ import { ParticipantsModule } from "../participants/participants.module";
         CourseEditComponent,
         MyCoursesComponent,
     ],
-    imports: [CommonModule, CoursesRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, ParticipantsModule],
+    imports: [CommonModule, CoursesRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, ParticipantsModule, CommentsModule],
 })
 
 export class CoursesModule {}

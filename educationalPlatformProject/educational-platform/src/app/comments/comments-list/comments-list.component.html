@@ -1,0 +1,34 @@
+<div class="comments">
+    <div class="title">
+        <h2>Comments</h2>
+    </div>
+
+    <div *ngFor="let comment of comments" class="comments-container">
+        <div class="comment-card">
+            <div class="comment-email">
+                <p>{{ comment.email }}: {{ comment.comment }}</p>
+            </div>
+    
+            <div *ngIf="isOwner(comment._ownerId)" class="btns">
+                <a class="btn-del" (click)="delete(comment._id)">X</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-form">
+        <form #form="ngForm" (ngSubmit)="addComment(form)">
+            <div class="comment-fields">
+                <label for="comment">Add new comment</label>
+                <textarea type="text" name="comment" id="comment" rows="2" #inputComment="ngModel" ngModel required minlength="5"></textarea>
+
+                <ng-container *ngIf="inputComment.touched">
+                    <p class="error" *ngIf="inputComment?.errors?.['minlength']">Comment must be at least 5 characters!</p>
+                </ng-container>
+            </div>
+
+            <div class="btns">
+                <button class="btn">Add</button>
+            </div>
+        </form>
+    </div>
+</div>

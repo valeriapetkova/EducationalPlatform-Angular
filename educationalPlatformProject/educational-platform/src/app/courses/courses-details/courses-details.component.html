@@ -27,6 +27,10 @@
         </div>
     </ng-container>
 
+    <div *ngIf="isLoggedIn && !showEditMode" class="comments">
+        <app-comments-list />
+    </div>
+
     <ng-container *ngIf="showEditMode">
         <app-course-edit [courseInfo]="course"/>
     </ng-container>

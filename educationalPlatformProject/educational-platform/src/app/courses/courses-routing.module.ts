@@ -8,6 +8,7 @@ const routes: Routes = [
     { path: 'courses', component: CoursesListComponent },
     { path: 'courses/:courseId', component: CoursesDetailsComponent},
     { path: 'courses/:courseId/joined', component: CoursesDetailsComponent},
+    { path: 'courses/:courseId/comments', component: CoursesDetailsComponent},
     {
         path: 'create',
         component: CreateCourseComponent

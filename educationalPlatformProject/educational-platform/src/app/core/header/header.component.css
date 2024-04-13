@@ -21,3 +21,7 @@
 .site-nav ul li a {
     text-decoration: none;
 }
+
+.lg:hover {
+    cursor: pointer;
+}
